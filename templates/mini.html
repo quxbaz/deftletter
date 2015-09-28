@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/static/css/mini.css" type="text/css" media="screen" />
+  <link rel="shortcut icon" href="/static/imgs/favicon.png" type="image/ico" />
+  <style>
+  </style>
+</head>
+
+<body>
+  {% include "header.html" %}
+  <div id="mini">
+    {% block content %}{% endblock %}
+  </div>
+  {% include "footer.html" %}
+  <script type="text/javascript" src="/static/js/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/js/app/mini.js"></script>
+</body>
+</html>

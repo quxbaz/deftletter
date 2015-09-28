@@ -1,0 +1,29 @@
+.steps {
+    li {margin: 12px 0;}
+    .text-centered, p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    p {
+        margin-left: 10px;
+        width: 80%;
+    }
+    em {
+        display: inline-block;
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        font-family: serif;
+        font-size: 1.7em;
+        font-weight: bold;
+        background: $color1_primary;
+        color: #ffffff;
+        border-radius: 26px;
+    }
+    strong {color: $color2_primary;}
+}
+
+#home .action-btn.closing {
+    float: right;
+    margin-top: 64px;
+}

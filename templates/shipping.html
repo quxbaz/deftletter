@@ -1,0 +1,58 @@
+{% extends "mini.html" %}
+
+{% block content %}
+
+<div id="shipping">
+  <div class="main-centered content">
+      {% include "checkout-process.html" %}
+      <form class="slim-centered" method="post" action="/charge" data-validate="parsley">
+        <h2>To whom and where shall we deliver?</h2>
+        <label>
+          <div>Full name</div>
+          <input type="text" name="name" placeholder="First and last name" data-required="true" data-trigger="change" />
+        </label>
+        <label>
+          <div>Email</div>
+          <input type="text" name="email" placeholder="bob@example.com" data-type="email" data-required="true" />
+        </label>
+        <label>
+          <div>Address line 1</div>
+          <input type="text" name="address1" data-required="true" />
+        </label>
+        <label>
+          <div>Address line 2</div>
+          <input type="text" name="address2" placeholder="optional" />
+        </label>
+        <label>
+          <div>City</div>
+          <input type="text" name="city" data-required="true" />
+        </label>
+        <div class="inlined">
+          <label class="state-label">
+            <div>State</div>
+            <select name="state">
+              <option>New York</option>
+              <option>Not New York</option>
+            </select>
+          </label>
+          <label class="zip-label last">
+            <div>Zip</div>
+            <input type="text" name="zip" data-required="true" />
+          </label>
+        </div>
+        <label>
+          <div>Phone number</div>
+          <input type="text" name="phone" placeholder="optional" />
+        </label>
+        <label>
+          <div>Additional notes</div>
+          <textarea placeholder="optional"></textarea>
+        </label>
+        <a href="customize" class="btn submit-btn">
+          Next step <i class="icon-shopping-cart"></i>
+        </a>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

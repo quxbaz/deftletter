@@ -1,0 +1,57 @@
+@import "base/colors";
+@import "base/fx";
+@import "base/mixins";
+
+body {
+    @include texture("irongrip.png");
+}
+
+#header, #footer {
+    @include texture("natural_paper.png");
+}
+
+#footer {margin-top: 0;}
+
+.content {
+    padding-bottom: 72px;
+    background: none;
+    @include box-shadow(none);
+}
+
+.slim-centered {
+    width: 520px;
+    margin: 0 auto;
+    padding: 48px;
+    @include box-sizing(border-box);
+    background: #f8f8f8;
+    border: 24px solid #e2e2e2;
+}
+
+.checkout-process {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #ffffff;
+    i {
+        font-size: 1em;
+        margin: 0 6px;
+        color: #777;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        i {
+            padding: 4px 0;
+            font-size: 2em;
+            &.active {color: $color1_primary;}
+        }
+    }
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 8px 0;
+    background-color: $color3_primary;
+    &:hover {background-color: $color3_strong1;}
+}
+

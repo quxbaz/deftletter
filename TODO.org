@@ -1,0 +1,103 @@
+TODO
+
+* Todo
+  - Get payments working w/ stripe.
+  - Implement option for how many cards to order.
+  - Write info for the user describing the cards.
+    + High quality paper, thickness
+  - Use SSL (necessary for stripe)
+  - You need to connect the filename, order, and customer to know what
+    image to print onto the card and to whom to send the order.
+  - Store customers in a database.
+  - Put in a paper texture background.
+  - Minimize file sizes.
+    + Home page splash image.
+  - Add social media buttons with icons.
+  - Add FAQ page.
+  - Add tagline somewhere (under logo?) [?]
+  - Get some form of analytics working.
+  - Set the title element on each page.
+  - Try to get webassets working with Sass.
+  - Add final payment confirmation page.
+  - Highlight the current step in checkout process.
+
+* Home
+  - Change action button color.
+  - Put up new info:
+    + Paper quality, sizing, colors, thickness, texture, feel
+    + Pricing
+
+* Design
+  - Remove footer margin and border.
+  - Give user feedback when browsing for uploading files.
+  - Replace all test images with your own images.
+  - Support vertical orientation.
+  - Make UI buttons look like buttons ([[http://pearlwebstudio.com/][buttons]]).
+  - Fix up the design/grid/control buttons.
+
+* Features
+  - Support uploading an image by dragging it like moo.
+  - Allow the user to save their progress when building a card.
+
+* Later Features
+  - Implement users and signup/signin.
+
+* Bonus Features
+  - Get drag and drop images working w/ HTML5 Files API ([[http://www.html5rocks.com/en/tutorials/file/dndfiles/#toc-selecting-files-dnd][link]]).
+
+* Code
+  - Use [[http://packages.python.org/Flask-Uploads/][flask-uploads]] instead of home rolling your own solution. Limit
+    the type of files you can receive.
+  - Don't store uploaded image files (for long).
+
+* Style
+  - Use moo luxe as an example.
+  - Add a snazzy hover effect over the logo.
+  - Add hover styles for links and whatever else.
+  - Use a custom font (google fonts?)
+  - Use natural paper background texture.
+  - Make the page wider, fluid, give it more white padding.
+  - BRAND it
+
+* CSS
+  - Use Less.
+  - Use variables.
+  - Use a fixed space unit.
+
+* Testing
+  - Write selenium tests
+    + Design
+    + Checkout
+  - Test on different browsers.
+
+* Promoting
+  - The first N orders should be free. A countdown should appear on the site.
+
+* Possible Names
+  - deftletter
+  - tightcards
+  - nononsensecards
+  - deftcards
+  - anglecards
+  - straightcards
+  - abcprint
+  - checkprint
+  - pintsofink
+  - 9000dpi
+  - printandslice
+  - printandcut
+  - cutandprint
+
+* Taglines
+  - Cards made easy
+
+* Business Plan
+  Start off by going to local printers. Search for the best printers
+  in Brooklyn/Manhattan. Offer to strike a deal with them. The deal
+  is this:
+  - They print the orders you take from your website. Either they ship
+    them to the customer or you ship them.
+  - They take a large cut of the payment - over 50%, since they are
+    the ones absorbing all the material costs.
+  - You observe how the printing process works and eventually you
+    purchase your own machines and cut out the middle man.

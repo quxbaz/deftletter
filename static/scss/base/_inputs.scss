@@ -1,0 +1,90 @@
+//--------------------------------------------------------------------
+// Buttons, selects, textfields, etc
+//--------------------------------------------------------------------
+
+
+.btn-base {
+    display: inline-block;
+    vertical-align: top;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="text"] {
+    display: inline-block;
+    min-width: 200px;
+    height: 26px;
+    padding: 0 4px;
+    @include box-sizing(border-box);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-top: 1px solid #aaa;
+}
+
+select {
+    height: 26px;
+    @include box-sizing(border-box);
+}
+
+.btn {
+    @extend .btn-base;
+    min-width: 60px;
+    padding: 0 24px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    background: $color1_primary;
+    @include transition(all 240ms linear);
+    &:hover {background-color: darken($color1_primary, 9%);}
+    i {font-size: 1.3em;}
+}
+
+.action-btn {
+    @extend .btn-base;
+    min-width: 160px;
+    padding: 2px 44px;
+    font-size: 2em;
+    line-height: 90px;
+    background-color: $color3_primary;
+    color: #ffffff;
+    @include transition(background-color 240ms linear);
+    i {
+        margin: {left: 0.1em; top: 0.4em;}
+        font-size: 1.6em;
+    }
+    &:hover {background-color: $color3_strong2;}
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 84px;
+    padding: 4px;
+    @include box-sizing(border-box);
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-top: 1px solid #aaa;
+}
+
+//--------------------------------------------------------------------
+// Parsley.js styles
+//--------------------------------------------------------------------
+
+
+.parsley-error-list {
+    margin-top: 5px;
+    line-height: $lineheight * 0.8;
+    font-size: $fs_sub;
+    color: lighten($error_color, 10%);
+}
+
+.parsley-error {
+    background: #fff4f4 !important;
+}

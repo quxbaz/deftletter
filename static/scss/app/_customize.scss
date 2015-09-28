@@ -1,0 +1,31 @@
+#customize {
+    .slim-centered {
+        background: $background_color;
+        width: $page_width;
+    }
+    table {
+        i {
+            display: inline-block;
+            padding-top: 6px;
+            font-size: 2.8em;
+        }
+        tr > *:first-child {
+            padding: 8px;
+            text-align: center;
+            color: #ddd;
+        }
+        tr {
+            cursor: pointer;
+            &.header-row {cursor: default;}
+            &:hover td {
+                background: lighten($color2_primary, 8%);
+                color: #ffffff;
+            }
+            &.picked td {
+                @include transition(background-color 240ms linear);
+                background: $color3_primary;
+                color: #ffffff;
+            }
+        }
+    }
+}

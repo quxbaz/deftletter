@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div id="design">
+  <div class="intro-info">
+    <div class="main-centered">
+      <div class="inner-centered">
+        <h2>Make your cards</h2>
+        <div class="design-info">
+          We cut our cards to the standard size which is 3.5 by 2 inches
+          so your image file should have a width toheight ratio of
+          7:4. To have excellent printed image quality, we strongly
+          suggest that your image contains at least <em>300
+            DPI</em>. This means that the minimum pixel resolution of your
+          image should be <em>1050x750</em> pixels. If you have any
+          questions about this, you can contact us at card@card.com.
+        </div>
+      </div>
+    </div>
+    <div class="design-errors">
+      <div class="main-centered">
+        <div class="inner-centered">
+        <h3>Oh no! Something's wrong with your image!</h3>
+        <ul>
+          <li>
+            <i class="icon-warning-sign"></i> Your <strong>image
+            resolution is too low</strong>. This could result in
+            a <strong>blurry print</strong>. Please upload an image
+            with a resolution of at least <strong>1050x750</strong>
+            pixels.
+          </li>
+          <li>
+            <i class="icon-warning-sign"></i> Your image does not have
+            the correct <strong>aspect ratio</strong>. You image will
+            be partially <strong>cut off</strong> as a result. The
+            width to height ratio should by <strong>7:4</strong>. An
+            image with the correct aspect ratio will occupy the entire
+            space in the grid.
+          </li>
+        </ul>
+        <p>
+          While you don't <em>need</em> to follow all of these
+          suggestions, we highly suggest you <em>do</em> so that you
+          obtain the best prints possible.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-centered content clearfix">
+    <div class="inner-centered">
+      <form class="clearfix" method="post" action="/design" enctype="multipart/form-data">
+        <input id="file-btn" type="file" name="file" />
+        <a class="btn proxy-btn" data-target="file-btn">
+          <span id="image-path">Click here to browse for an image</span>
+          <i class="icon-picture"></i>
+        </a>
+        <a href="" class="btn submit-btn">
+          Upload <i class="icon-upload"></i>
+        </a>
+      </form>
+      <div class="design-grid">
+        {% if image_url %}
+        <img src="{{image_url}}" />
+        {% endif %}
+      </div>
+      <a href="" id="flip-card-btn" class="btn">
+        <span>Flip to <span id="card-side">back</span> of card</span>
+        <i class="icon-undo"></i>
+      </a>
+      <a href="/shipping" id="next-step-btn" class="btn">
+        Checkout <i class="icon-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

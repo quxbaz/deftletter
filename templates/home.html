@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div id="home">
+  <div class="backdrop">
+    <div class="inner-centered">
+      <a href="/design" class="action-btn">Design a card now <i class="icon-share-alt"></i></a>
+    </div>
+  </div>
+  <div class="main-centered content">
+    <div class="inner-centered">
+      <div class="block clearfix our-cards">
+        <h2>Our cards</h2>
+        <img src="/static/imgs/test/cards.jpg" class="float-right" />
+        <p>
+          A card is only as good as the paper it's printed on. We at
+          <span class="logo">DeftLetter<i class="icon-print"></i></span>
+          understand the importance of using quality materials. We've
+          selected a paper stock at a mindful intersection between price
+          and quality.
+        </p>
+        <p>
+          Our paper has the delicate texture of a newly hatched dinosaur
+          egg and the sturdiness of a battle-tested goose feather.
+        </p>
+        <p>
+          We print in full vibrant color and beautiful stark black.
+        </p>
+        <p>
+          All of our cards are the standard size, 3.5 by 2 inches.
+        </p>
+      </div>
+      <div class="block steps">
+        <h2>Getting your cards is simple!</h2>
+        <ol>
+          <li>
+            <div class="text-centered"><em class="step">1</em></div>
+            <p>
+              <strong>Upload</strong>: Draw your design and upload it.
+            </p>
+          </li>
+          <li>
+            <div class="text-centered"><em class="step">2</em></div>
+            <p>
+              <strong>Details</strong>: Select how many cards you want
+              and enter your info.
+          </p>
+        </li>
+        <li>
+          <div class="text-centered"><em class="step">3</em></div>
+          <p>
+            <strong>Confirm</strong>: We'll print and cut your cards,
+            then ship them to your door.
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="last block clearfix">
+      <h2>Pricing</h2>
+      {% include "pricing-table.html" %}
+      <a href="/design" class="action-btn closing"> Start making your
+        cards <i class="icon-share-alt"></i></a>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

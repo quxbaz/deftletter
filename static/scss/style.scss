@@ -1,0 +1,100 @@
+@import "base/base";
+@import "misc/fontawesome";
+@import "app/home";
+@import "app/design";
+@import "app/about";
+@import "app/shipping";
+@import "app/customize";
+
+h1 {
+    font-weight: normal;
+    font-size: 3.2em;
+}
+
+h2 {font-size: 1.8em;}
+
+.outer {
+    padding: 20px 0;
+    a {
+        padding-bottom: 4px;
+        font-size: $fs_sub - 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $font_color;
+    }
+    nav a:hover {
+        border-bottom: 2px solid lighten($font_color, 8%);
+    }
+}
+
+.content {
+   background: $background_color;
+   padding: 64px 0 96px 0;
+   @include box-sizing(border-box);
+   @include box-shadow(0 10px 32px #ccc);
+}
+
+.logo {
+    color: $color2_strong1;
+    text-shadow: 1px 1px 1px $accent_color;
+}
+
+#header {
+    padding: 0;
+    border-bottom: 1px solid #888;
+    .main-centered, .inner-centered {
+        position: relative;
+        height: 100%;
+        @include box-sizing(border-box);
+        padding: 28px 32px;
+    }
+    h1 {
+        position: absolute;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: $fs_h1;
+        text-transform: none;
+    }
+    nav {float: right;}
+    a {margin-left: 24px;}
+}
+
+#footer {
+    min-height: 240px;
+    margin-top: 160px;
+    border-top: 1px solid #888;
+    .main-centered, .inner-centered {
+        @include box-sizing(border-box);
+        padding: {left: 32px; right: 32px;}
+    }
+    nav div {margin-bottom: 12px;}
+}
+
+.backdrop {
+    height: 518px;
+    background: url("/static/imgs/test/moo_lux.jpg") center top no-repeat;
+    background-size: cover;
+    .main-centered, .inner-centered {
+        position: relative;
+        height: 100%;
+    }
+    .action-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        margin: 0;
+        opacity: 0.88;
+    }
+}
+
+.block {
+    padding: 32px 0;
+    border-top: 1px solid #dddddd;
+    &:first-child {
+        padding-top: 0;
+        border-top: none;
+    }
+    &.last {padding-bottom: 0;}
+}

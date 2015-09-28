@@ -1,0 +1,30 @@
+#shipping {
+    input[type="text"] {
+        width: 100%;
+        margin: 0;
+    }
+    label {
+        display: block;
+        padding: 8px 0;
+        div {
+            margin-bottom: 4px;
+            font-size: $fs_sub;
+            font-weight: bold;
+            color: lighten($font_color, 10%);
+            text-shadow: 0 1px 1px #ffffff;
+        }
+    }
+    .state-label {width: 36%;}
+    .zip-label {width: 56%;}
+    .inlined label {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 16px;
+        select {width: 100%;}
+        input {width: 100%; min-width: 0;}
+        &.last {
+            float: right;
+            margin-right: 0;
+        }
+    }
+}

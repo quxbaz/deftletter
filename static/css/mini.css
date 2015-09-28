@@ -1,0 +1,50 @@
+body {
+  background: url("/static/imgs/textures/irongrip.png") left top repeat; }
+
+#header, #footer {
+  background: url("/static/imgs/textures/natural_paper.png") left top repeat; }
+
+#footer {
+  margin-top: 0; }
+
+.content {
+  padding-bottom: 72px;
+  background: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.slim-centered {
+  width: 520px;
+  margin: 0 auto;
+  padding: 48px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: #f8f8f8;
+  border: 24px solid #e2e2e2; }
+
+.checkout-process {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #ffffff; }
+  .checkout-process i {
+    font-size: 1em;
+    margin: 0 6px;
+    color: #777; }
+  .checkout-process li {
+    display: inline-block;
+    vertical-align: middle; }
+    .checkout-process li i {
+      padding: 4px 0;
+      font-size: 2em; }
+      .checkout-process li i.active {
+        color: #ed6700; }
+
+.submit-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 8px 0;
+  background-color: #00a84e; }
+  .submit-btn:hover {
+    background-color: #006a31; }
